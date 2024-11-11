@@ -1,0 +1,4 @@
+data/
+podcastfy/api/output_files/
+podcastfy/api/temp_files/
+.env

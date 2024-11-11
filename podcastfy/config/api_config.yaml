@@ -1,0 +1,24 @@
+# 作业处理相关配置
+job_processing:
+  max_concurrent_jobs: 1  # 最大并发作业数
+  temp_directory: "podcastfy/api/temp_files"  # 临时文件存储目录
+  output_directory: "podcastfy/api/output_files"  # 输出文件存储目录
+  job_expire_days: 7  # 作业数据过期时间（天）
+
+# Redis 相关配置
+redis:
+  url: "redis://localhost:6379"  # Redis 连接 URL
+  prefix:
+    job: "podcastfy_api_job:"  # 作业键前缀
+    job_hash: "podcastfy_api_job_hash:"  # 作业哈希键前缀
+
+# 文件处理配置
+file_handling:
+  allowed_extensions: [".pdf", ".txt", ".md"]  # 允许的文件扩展名
+  max_file_size_mb: 30  # 最大文件大小（MB）
+  cleanup_on_complete: true  # 作业完成后是否清理临时文件
+
+# API TEST 相关配置
+api_test:
+  base_url: "https://audioai.alphalio.cn/api"  # API 基础 URL
+  timeout: 1800  # API 请求超时时间（秒）
